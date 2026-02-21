@@ -1,34 +1,217 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <title>Job Application Tracker</title>
     <!-- tailwind + daisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <!-- font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        * {
-            font-family: "Outfit", sans-serif;
-        }
-    </style>
 </head>
 
-<body class="">
+<body class="max-w-6xl mx-auto">
 
+    <header>
+        <h1 class="text-[32px] font-bold text-[#002C5C]">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-4">
+            <div>
+                <p class="font-medium text-[#323B49]">Total</p>
+                <p id="totalN" class="font-bold text-2xl text-[#002B70]">8</p>
+            </div>
+            <div>
+                <p class="font-medium text-[#323B49]">Interview</p>
+                <p id="interviewN" class="font-bold text-2xl text-[#10B981]">0</p>
+            </div>
+            <div>
+                <p class="font-medium text-[#323B49]">Rejected</p>
+                <p id="rejectedN" class="font-bold text-2xl text-[#EF4444]">0</p>
+            </div>
+        </div>
+    </header>
 
+    <main class="mt-5">
 
+        <section class="space-y-5">
+            <div class="flex justify-between">
+                <h2>Available Jobs</h2>
+                <p><span>8</span> jobs</p>
+            </div>
+            <div class="space-x-2">
+                <button id="all" onclick="btnBgChange('all')" class="btn btn-primary">All</button>
+                <button id="interview" onclick="btnBgChange('interview')" class="btn">Interview</button>
+                <button onclick="btnBgChange('rejected')" id="rejected" class="btn">Rejected</button>
+            </div>
+        </section>
 
-    <script src=""></script>
+        <section class="mt-10 space-y-4">
+            <div class="flex justify-between">
+                <div class="space-y-5 p-6">
+                    <div>
+                        <h3 id="" class="company-name text-lg font-semibold text-[#002C5C]">Mobile First Corp</h3>
+                        <p class="job-type">React Native Developer</p>
+                    </div>
+                    <p class="salary">Remote • Full-time • $130,000 - $175,000</p>
+                    <div>
+                        <p id="status" class="statuS w-[113px] px-3 py-2 text-[#002C5C] bg-[#002C5C]/10 font-medium rounded-sm">Not Applied</p>
+                        <p class="desc">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="space-x-2">
+                        <button id="interview-btn" class="interview-btn btn btn-outline btn-success">INTERVIEW</button>
+                        <button id="rejected-btn" class="rejected-btn btn btn-outline btn-error">REJECTED</button>
+                    </div>
+                </div>
+                <div>
+                    <img id="delete-btn" class="image cursor-pointer" src="assets/delete.png" alt="">
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <div class="space-y-5 p-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-[#002C5C]">Mobile First Corp</h3>
+                        <p>React Native Developer</p>
+                    </div>
+                    <p>Remote • Full-time • $130,000 - $175,000</p>
+                    <div>
+                        <p id="status" class="w-[113px] px-3 py-2 text-[#002C5C] bg-[#002C5C]/10 font-medium rounded-sm">Not Applied</p>
+                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="space-x-2">
+                        <button id="interview-btn" class="btn btn-outline btn-success">INTERVIEW</button>
+                        <button id="rejected-btn" class="btn btn-outline btn-error">REJECTED</button>
+                    </div>
+                </div>
+                <div>
+                    <img id="delete-btn" class="cursor-pointer" src="assets/delete.png" alt="">
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <div class="space-y-5 p-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-[#002C5C]">Mobile First Corp</h3>
+                        <p>React Native Developer</p>
+                    </div>
+                    <p>Remote • Full-time • $130,000 - $175,000</p>
+                    <div>
+                        <p id="status" class="w-[113px] px-3 py-2 text-[#002C5C] bg-[#002C5C]/10 font-medium rounded-sm">Not Applied</p>
+                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="space-x-2">
+                        <button id="interview-btn" class="btn btn-outline btn-success">INTERVIEW</button>
+                        <button id="rejected-btn" class="btn btn-outline btn-error">REJECTED</button>
+                    </div>
+                </div>
+                <div>
+                    <img id="delete-btn" class="cursor-pointer" src="assets/delete.png" alt="">
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <div class="space-y-5 p-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-[#002C5C]">Mobile First Corp</h3>
+                        <p>React Native Developer</p>
+                    </div>
+                    <p>Remote • Full-time • $130,000 - $175,000</p>
+                    <div>
+                        <p id="status" class="w-[113px] px-3 py-2 text-[#002C5C] bg-[#002C5C]/10 font-medium rounded-sm">Not Applied</p>
+                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="space-x-2">
+                        <button id="interview-btn" class="btn btn-outline btn-success">INTERVIEW</button>
+                        <button id="rejected-btn" class="btn btn-outline btn-error">REJECTED</button>
+                    </div>
+                </div>
+                <div>
+                    <img id="delete-btn" class="cursor-pointer" src="assets/delete.png" alt="">
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <div class="space-y-5 p-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-[#002C5C]">Mobile First Corp</h3>
+                        <p>React Native Developer</p>
+                    </div>
+                    <p>Remote • Full-time • $130,000 - $175,000</p>
+                    <div>
+                        <p id="status" class="w-[113px] px-3 py-2 text-[#002C5C] bg-[#002C5C]/10 font-medium rounded-sm">Not Applied</p>
+                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="space-x-2">
+                        <button id="interview-btn" class="btn btn-outline btn-success">INTERVIEW</button>
+                        <button id="rejected-btn" class="btn btn-outline btn-error">REJECTED</button>
+                    </div>
+                </div>
+                <div>
+                    <img id="delete-btn" class="cursor-pointer" src="assets/delete.png" alt="">
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <div class="space-y-5 p-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-[#002C5C]">Mobile First Corp</h3>
+                        <p>React Native Developer</p>
+                    </div>
+                    <p>Remote • Full-time • $130,000 - $175,000</p>
+                    <div>
+                        <p id="status" class="w-[113px] px-3 py-2 text-[#002C5C] bg-[#002C5C]/10 font-medium rounded-sm">Not Applied</p>
+                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="space-x-2">
+                        <button id="interview-btn" class="btn btn-outline btn-success">INTERVIEW</button>
+                        <button id="rejected-btn" class="btn btn-outline btn-error">REJECTED</button>
+                    </div>
+                </div>
+                <div>
+                    <img id="delete-btn" class="cursor-pointer" src="assets/delete.png" alt="">
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <div class="space-y-5 p-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-[#002C5C]">Mobile First Corp</h3>
+                        <p>React Native Developer</p>
+                    </div>
+                    <p>Remote • Full-time • $130,000 - $175,000</p>
+                    <div>
+                        <p id="status" class="w-[113px] px-3 py-2 text-[#002C5C] bg-[#002C5C]/10 font-medium rounded-sm">Not Applied</p>
+                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="space-x-2">
+                        <button id="interview-btn" class="btn btn-outline btn-success">INTERVIEW</button>
+                        <button id="rejected-btn" class="btn btn-outline btn-error">REJECTED</button>
+                    </div>
+                </div>
+                <div>
+                    <img id="delete-btn" class="cursor-pointer" src="assets/delete.png" alt="">
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <div class="space-y-5 p-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-[#002C5C]">Mobile First Corp</h3>
+                        <p>React Native Developer</p>
+                    </div>
+                    <p>Remote • Full-time • $130,000 - $175,000</p>
+                    <div>
+                        <p id="status" class="w-[113px] px-3 py-2 text-[#002C5C] bg-[#002C5C]/10 font-medium rounded-sm">Not Applied</p>
+                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="space-x-2">
+                        <button id="interview-btn" class="btn btn-outline btn-success">INTERVIEW</button>
+                        <button id="rejected-btn" class="btn btn-outline btn-error">REJECTED</button>
+                    </div>
+                </div>
+                <div>
+                    <img id="delete-btn" class="cursor-pointer" src="assets/delete.png" alt="">
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+
+    <script src="script/machine.js"></script>
+    <script src="script/script.js"></script>
 </body>
 
 </html>
