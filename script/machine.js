@@ -5,6 +5,7 @@ function btnBgChange(id) {
     rejected.classList.remove('btn-primary');
 
     onclickBtn.classList.add('btn-primary');
+    currentstatus = id;
 
     if (id == 'interview') {
         allCard.classList.add('hidden');
@@ -38,7 +39,7 @@ function renderInterview() {
                     </div>
                     <p class="salary">Remote • Full-time • $130,000 - $175,000</p>
                     <div>
-                        <p id="status" class="statuS w-[113px] px-3 py-2 text-[#002C5C] bg-[#002C5C]/10 font-medium rounded-sm">Not Applied</p>
+                        <p id="status" class="statuS w-[113px] px-3 py-2 text-[#002C5C] bg-[#002C5C]/10 font-medium rounded-sm">${i.statuS}</p>
                         <p class="desc">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     </div>
                     <div class="space-x-2">
@@ -51,7 +52,8 @@ function renderInterview() {
                 </div>
         `
     filterSection.appendChild(div);
-    }
+}
+document.getElementById('status').innerText = 'INTERVIEW';
 }
 
 function renderRejected() {
@@ -68,7 +70,7 @@ function renderRejected() {
                     </div>
                     <p class="salary">Remote • Full-time • $130,000 - $175,000</p>
                     <div>
-                        <p id="status" class="statuS w-[113px] px-3 py-2 text-[#002C5C] bg-[#002C5C]/10 font-medium rounded-sm">Not Applied</p>
+                        <p id="status" class="statuS w-[113px] px-3 py-2 text-[#002C5C] bg-[#002C5C]/10 font-medium rounded-sm">${i.statuS}</p>
                         <p class="desc">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     </div>
                     <div class="space-x-2">
@@ -81,7 +83,8 @@ function renderRejected() {
                 </div>
         `
     filterSection.appendChild(div);
-    }
+}
+document.getElementById('status').innerText = 'REJECTED';
 }
 
 
@@ -91,3 +94,9 @@ function calculateCount() {
     rejectedN.innerText = rejectedList.length;
 }
 calculateCount();
+
+
+
+function itemRemove(id) {
+    document.getElementById(id).classList.add = 'hidden';
+}

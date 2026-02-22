@@ -1,5 +1,6 @@
 let interviewList = [];
 let rejectedList = [];
+let currentstatus = '';
 
 const totalN = document.getElementById('totalN');
 const interviewN = document.getElementById('interviewN');
@@ -10,8 +11,8 @@ const interview = document.getElementById('interview');
 const rejected = document.getElementById('rejected');
 
 const status = document.getElementById('status');
-const interviewBtn = document.getElementById('interview-btn');
-const rejectedBtn = document.getElementById('rejected-btn');
+// const interviewBtn = document.getElementById('interview-btn');
+// const rejectedBtn = document.getElementById('rejected-btn');
 
 const mainContainer = document.querySelector('main');
 const allCard = document.getElementById('allCard');
@@ -46,8 +47,14 @@ mainContainer.addEventListener('click', function(event) {
         if (!companyExist) {
             interviewList.push(cardInfo);
         }
+
+        rejectedList = rejectedList.filter(i => i.companyName != cardInfo.companyName);
+
+        if (currentstatus == 'rejected') {
+            renderRejected();
+        }
+
         calculateCount();
-        renderInterview();
     }
 
     else if (event.target.classList.contains('rejected-btn')) {
@@ -62,12 +69,11 @@ mainContainer.addEventListener('click', function(event) {
         const rejectedBtn = parentNode.querySelector('.rejected-btn').innerText;
         
         parentNode.querySelector('.statuS').innerText = 'REJECTED';
-        // document.getElementById('status').innerText = 'Rejected';
         const cardInfo = {
             companyName,
             jobType,
             salary,
-            statuS,
+            statuS: 'REJECTED',
             desc,
             interviewBtn,
             rejectedBtn
@@ -78,7 +84,13 @@ mainContainer.addEventListener('click', function(event) {
         if (!companyExist) {
             rejectedList.push(cardInfo);
         }
+
+        interviewList = interviewList.filter(i => i.companyName != cardInfo.companyName);
+
+        if (currentstatus == 'interview') {
+            renderInterview();
+        }
+
         calculateCount();
-        renderRejected();
     }
 })
