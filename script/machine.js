@@ -11,13 +11,16 @@ function btnBgChange(id) {
         allCard.classList.add('hidden');
         filterSection.classList.remove('hidden');
         renderInterview();
+        availableJob.innerText = interviewList.length;
     } else if (id == 'all') {
         allCard.classList.remove('hidden');
         filterSection.classList.add('hidden');
+        availableJob.innerText = allCard.childElementCount;
     } else if (id == 'rejected') {
         allCard.classList.add('hidden');
         filterSection.classList.remove('hidden');
         renderRejected();
+        availableJob.innerText = rejectedList.length;
     }
 }
 

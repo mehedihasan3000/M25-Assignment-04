@@ -16,6 +16,7 @@ const status = document.getElementById('status');
 
 const mainContainer = document.querySelector('main');
 const allCard = document.getElementById('allCard');
+const availableJob = document.getElementById('job');
 
 
 mainContainer.addEventListener('click', function(event) {
