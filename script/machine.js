@@ -1,10 +1,10 @@
 function btnBgChange(id) {
     const onclickBtn = document.getElementById(id);
-    all.classList.remove('btn-primary');
-    interview.classList.remove('btn-primary');
-    rejected.classList.remove('btn-primary');
+    all.classList.remove('btn-info');
+    interview.classList.remove('btn-info');
+    rejected.classList.remove('btn-info');
 
-    onclickBtn.classList.add('btn-primary');
+    onclickBtn.classList.add('btn-info');
     currentstatus = id;
 
     if (id == 'interview') {
@@ -12,15 +12,28 @@ function btnBgChange(id) {
         filterSection.classList.remove('hidden');
         renderInterview();
         availableJob.innerText = interviewList.length;
+
+        if (interviewList.length == '0'){
+            // const noJob = document.getElementById('noJob');
+            noJob.classList.remove('hidden');
+        } else {
+            noJob.classList.add('hidden');
+        }
     } else if (id == 'all') {
         allCard.classList.remove('hidden');
         filterSection.classList.add('hidden');
         availableJob.innerText = allCard.childElementCount;
+        noJob.classList.add('hidden');
     } else if (id == 'rejected') {
         allCard.classList.add('hidden');
         filterSection.classList.remove('hidden');
         renderRejected();
         availableJob.innerText = rejectedList.length;
+        if (rejectedList.length == '0'){
+            noJob.classList.remove('hidden');
+        } else {
+            noJob.classList.add('hidden');
+        }
     }
 }
 

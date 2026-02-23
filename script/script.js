@@ -1,7 +1,7 @@
 let interviewList = [];
 let rejectedList = [];
 let currentstatus = '';
-
+console.log(interviewList.length)
 const totalN = document.getElementById('totalN');
 const interviewN = document.getElementById('interviewN');
 const rejectedN = document.getElementById('rejectedN');
