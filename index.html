@@ -35,7 +35,7 @@
         <section class="space-y-5 sticky top-[104px] bg-white z-10">
             <div class="flex justify-between">
                 <h2>Available Jobs</h2>
-                <p><span id="job">8</span> jobs</p>
+                <p><span id="job">8</span> of 8 jobs</p>
             </div>
             <div class="space-x-2">
                 <button id="all" onclick="btnBgChange('all')" class="btn btn-primary">All</button>
@@ -49,7 +49,7 @@
         </section>
 
         <section id="allCard" class="mt-10 space-y-4">
-            <div id="card1" class="flex justify-between">
+            <div id="card1" class="flex flex-col md:flex-row md:justify-between">
                 <div class="space-y-5 p-6">
                     <div>
                         <h3 id="" class="company-name text-lg font-semibold text-[#002C5C]">Mobile First Corp</h3>
@@ -65,11 +65,11 @@
                         <button id="rejected-btn" class="rejected-btn btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
-                <div>
-                    <img onclick="itemRemove('card1')" class="image cursor-pointer" src="assets/delete.png" alt="">
+                <div onclick="itemRemove('card1')" class="ml-5 sm:ml-7 md:ml-10">
+                    <img class="image cursor-pointer" src="assets/delete.png" alt="">
                 </div>
             </div>
-            <div class="flex justify-between">
+            <div id="card2" class="flex justify-between">
                 <div class="space-y-5 p-6">
                     <div>
                         <h3 id="" class="company-name text-lg font-semibold text-[#002C5C]">WebFlow Agency</h3>
@@ -85,11 +85,11 @@
                         <button id="rejected-btn" class="rejected-btn btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
-                <div>
+                <div onclick="itemRemove('card2')">
                     <img id="delete-btn" class="image cursor-pointer" src="assets/delete.png" alt="">
                 </div>
             </div>
-            <div class="flex justify-between">
+            <div id="card3" class="flex justify-between">
                 <div class="space-y-5 p-6">
                     <div>
                         <h3 id="" class="company-name text-lg font-semibold text-[#002C5C]">DataViz Solutions</h3>
@@ -105,11 +105,11 @@
                         <button id="rejected-btn" class="rejected-btn btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
-                <div>
+                <div onclick="itemRemove('card3')">
                     <img id="delete-btn" class="image cursor-pointer" src="assets/delete.png" alt="">
                 </div>
             </div>
-            <div class="flex justify-between">
+            <div id="card4" class="flex justify-between">
                 <div class="space-y-5 p-6">
                     <div>
                         <h3 id="" class="company-name text-lg font-semibold text-[#002C5C]">CloudFirst Inc</h3>
@@ -125,11 +125,11 @@
                         <button id="rejected-btn" class="rejected-btn btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
-                <div>
+                <div onclick="itemRemove('card4')">
                     <img id="delete-btn" class="image cursor-pointer" src="assets/delete.png" alt="">
                 </div>
             </div>
-            <div class="flex justify-between">
+            <div id="card5" class="flex justify-between">
                 <div class="space-y-5 p-6">
                     <div>
                         <h3 id="" class="company-name text-lg font-semibold text-[#002C5C]">Innovation Labs</h3>
@@ -145,11 +145,11 @@
                         <button id="rejected-btn" class="rejected-btn btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
-                <div>
+                <div onclick="itemRemove('card5')">
                     <img id="delete-btn" class="image cursor-pointer" src="assets/delete.png" alt="">
                 </div>
             </div>
-            <div class="flex justify-between">
+            <div id="card6" class="flex justify-between">
                 <div class="space-y-5 p-6">
                     <div>
                         <h3 id="" class="company-name text-lg font-semibold text-[#002C5C]">MegaCorp Solutions</h3>
@@ -165,11 +165,11 @@
                         <button id="rejected-btn" class="rejected-btn btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
-                <div>
+                <div onclick="itemRemove('card6')">
                     <img id="delete-btn" class="image cursor-pointer" src="assets/delete.png" alt="">
                 </div>
             </div>
-            <div class="flex justify-between">
+            <div id="card7" class="flex justify-between">
                 <div class="space-y-5 p-6">
                     <div>
                         <h3 id="" class="company-name text-lg font-semibold text-[#002C5C]">StartupXYZ</h3>
@@ -185,11 +185,11 @@
                         <button id="rejected-btn" class="rejected-btn btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
-                <div>
+                <div onclick="itemRemove('card7')">
                     <img id="delete-btn" class="image cursor-pointer" src="assets/delete.png" alt="">
                 </div>
             </div>
-            <div class="flex justify-between">
+            <div id="card8" class="flex justify-between">
                 <div class="space-y-5 p-6">
                     <div>
                         <h3 id="" class="company-name text-lg font-semibold text-[#002C5C]">TechCorp Industries</h3>
@@ -205,7 +205,7 @@
                         <button id="rejected-btn" class="rejected-btn btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
-                <div>
+                <div onclick="itemRemove('card8')">
                     <img id="delete-btn" class="image cursor-pointer" src="assets/delete.png" alt="">
                 </div>
             </div>

@@ -101,5 +101,11 @@ calculateCount();
 
 
 function itemRemove(id) {
-    document.getElementById(id).classList.add = 'hidden';
+    const hide = document.getElementById(id);
+    hide.className = 'hidden';
 }
+
+// document.getElementById('delete-btn').addEventListener('click', function(event){
+//     const x = event.target.parentNode.parentNode;
+//     x.className = 'hidden';
+// })
