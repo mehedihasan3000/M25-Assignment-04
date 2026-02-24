@@ -1,7 +1,7 @@
 let interviewList = [];
 let rejectedList = [];
 let currentstatus = '';
-console.log(interviewList.length)
+
 const totalN = document.getElementById('totalN');
 const interviewN = document.getElementById('interviewN');
 const rejectedN = document.getElementById('rejectedN');
@@ -10,9 +10,6 @@ const all = document.getElementById('all');
 const interview = document.getElementById('interview');
 const rejected = document.getElementById('rejected');
 
-const status = document.getElementById('status');
-// const interviewBtn = document.getElementById('interview-btn');
-// const rejectedBtn = document.getElementById('rejected-btn');
 
 const mainContainer = document.querySelector('main');
 const allCard = document.getElementById('allCard');

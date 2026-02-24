@@ -69,7 +69,7 @@ function renderInterview() {
         `
     filterSection.appendChild(div);
 }
-document.getElementById('status').innerText = 'INTERVIEW';
+// document.getElementById('status').innerText = 'INTERVIEW';
 }
 
 function renderRejected() {
@@ -100,7 +100,7 @@ function renderRejected() {
         `
     filterSection.appendChild(div);
 }
-document.getElementById('status').innerText = 'REJECTED';
+// document.getElementById('status').innerText = 'REJECTED';
 }
 
 
@@ -112,13 +112,7 @@ function calculateCount() {
 calculateCount();
 
 
-
 function itemRemove(id) {
     const hide = document.getElementById(id);
     hide.className = 'hidden';
 }
-
-// document.getElementById('delete-btn').addEventListener('click', function(event){
-//     const x = event.target.parentNode.parentNode;
-//     x.className = 'hidden';
-// })
